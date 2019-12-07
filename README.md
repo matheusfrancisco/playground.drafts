@@ -17,7 +17,19 @@ These are the features required:
 - [ ] Two or more entities (robots or dinosaurs) cannot occupy the same position;
 - [ ] Attempting to move a robot outside the simulation space is an invalid operation.
 
-## Usage
+## Architecture
+
+The API is  written in clojure based on Hexagonal Architecture, for managing the life-cycle
+of components which have run-time state, also can be seen as the dependency injection for
+immutable data structures.
+
+### Ports
+
+### Adpaters
+
+### Controllers
+
+### Logic
 
 
 ## License
