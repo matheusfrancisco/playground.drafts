@@ -1,4 +1,4 @@
-(ns api.port.service
+(ns api.service
   (:require [compojure.route :as route]
             [compojure.core :refer [defroutes GET]]
             [ring.middleware.params :refer [wrap-params]]
