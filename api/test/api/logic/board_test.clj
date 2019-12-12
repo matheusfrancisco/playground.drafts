@@ -6,6 +6,6 @@
 
 (facts "Be able to create an empty simulation space -an empty 50 x 50 grid"
        (fact "Must be a 50x50 grid"
-             (board/new-board 50 50) => {:size-x 50 :size-y 50}))
+             (board/new-board 50 50) => {:size 50 :units 50}))
 
 
