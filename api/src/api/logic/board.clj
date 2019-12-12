@@ -1,12 +1,16 @@
 (ns api.logic.board)
 
-(def rows 50)
-(def cols 50)
 
+(defrecord Board [size units])
 
 (defn new-board
-  "Return simple board size-x per size-y"
-  [size-x size-y]
-  {:size-x size-x :size-y size-y})
-
+  "Return a board of to-array-2d "
+  ([size units]
+  (map->Board
+    {:size size
+     :units units}))
+  ([size]
+   (new-board size #{}))
+  ([]
+   (new-board [50 50])))
 
