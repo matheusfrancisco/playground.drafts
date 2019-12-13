@@ -1,4 +1,7 @@
-(ns api.logic.robot)
+(ns api.logic.robot
+  (:require
+    (api.logic
+      [utils :as u])))
 
 (defrecord Robot [id type position direction])
 
@@ -10,4 +13,6 @@
     {:id id
      :type :robot
      :position position
-     :direction orientation}))
+     :direction (u/direction-with-4-sides orientation)}))
+
+
