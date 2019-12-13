@@ -1,11 +1,20 @@
 (ns api.logic.utils-test
   (:require [clojure.test :refer :all]
             [midje.sweet :refer :all]
-            [api.logic.utils :as utils]))
+            [api.logic.utils :as u]))
 
 
-(facts "Be able to create a point"
+(facts "Be able to create new point"
        (fact "create a new point"
-             (utils/create-point 1 1) => {:x 1 :y 1}))
+             (u/create-point 1 1) => {:x 1 :y 1}))
+
+(facts "Be able to create direction"
+       (fact "create a new up direction"
+             (u/create-direction-oriented :up u/orientation-sides)
+             => {:orientation :up :position (u/orientation-sides :up)})
+
+       (fact "create a direction with 4 sides")
+             (u/direction-with-4-sides :up) =>
+             {:orientation :up :position (u/orientation-sides :up)})
 
 
