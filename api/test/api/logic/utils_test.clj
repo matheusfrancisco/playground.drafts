@@ -11,10 +11,10 @@
 (facts "Be able to create direction"
        (fact "create a new up direction"
              (u/create-direction-oriented :up u/orientation-sides)
-             => {:orientation :up :position (u/orientation-sides :up)})
+             => {:orientation :up :position {:x 0 :y -1}})
 
        (fact "create a direction with 4 sides")
              (u/direction-with-4-sides :up) =>
-             {:orientation :up :position (u/orientation-sides :up)})
+             {:orientation :up :position {:x 0 :y -1}})
 
 

@@ -11,6 +11,6 @@
              => {:id 1
                  :type :robot
                  :position {:x 1 :y 2}
-                 :direction (u/direction-with-4-sides :up)}))
+                 :direction {:orientation :up :position {:x 0 :y -1}}}))
 
 
