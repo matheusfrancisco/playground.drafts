@@ -1,7 +1,8 @@
 # My Roadmap to self improvement
 
 This is my roadmap to self improvment, I will  improve these topics more next year.
-I will try to document all my micro and macro advances in my blog [matheusfrancisco](matheusfranciso.com.br).
+
+I will try to document all in my blog [matheusfrancisco](matheusfranciso.com.br).
 
 ## Subjects
 
@@ -37,7 +38,9 @@ My list of Books for 2020 [link-to-book-roadmap](https://www.matheusfrancisco.co
 * Courser for 2020
 
 [Mathematics for computer science](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-fall-2010/index.htm)
+
 [Single Variable Calculus](https://ocw.mit.edu/courses/mathematics/18-01-single-variable-calculus-fall-2006/index.htm)
+
 [Algorithms](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/index.htm)
 
 ## Events for 2020
