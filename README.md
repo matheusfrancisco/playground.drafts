@@ -18,9 +18,11 @@ These are my current study topics.
 * Algorithm Complexity
 * NP-complete problems
 * Dynamic Programming
+* Machine Learning
+* Artificial Inteligence
 * Git
 
-#### Progarmming languages
+#### Progarmming languages to improve 2020
 
 * Python
 * GO
@@ -42,6 +44,8 @@ My list of Books for 2020 [link-to-book-roadmap](https://www.matheusfrancisco.co
 [Single Variable Calculus](https://ocw.mit.edu/courses/mathematics/18-01-single-variable-calculus-fall-2006/index.htm)
 
 [Algorithms](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/index.htm)
+
+[Advanced Algorithms](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-854j-advanced-algorithms-fall-2008/)
 
 ## Events for 2020
 
