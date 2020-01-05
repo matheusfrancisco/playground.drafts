@@ -42,6 +42,9 @@ My list of Books for 2020 [link-to-book-roadmap](https://www.matheusfrancisco.co
 ## Websites
 
 
+## My favorite podcasts
+
+* List [podcasts](/podcast-list.md)
 
 ## Courses  (free)
 
