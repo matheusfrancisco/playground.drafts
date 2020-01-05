@@ -1,8 +1,10 @@
 # My Roadmap to self improvement
 
-This is my roadmap to self improvment, I will  improve these topics more next year.
+This is my roadmap to self improvement, I will  improve these topics more next year.
 
 I will try to document all in my blog [matheusfrancisco](matheusfranciso.com.br).
+
+My goals and roadmap to focus in 2020 [matheusfrancisco](https://www.matheusfrancisco.com.br/roadmap/my-roadmap/)
 
 ## Subjects
 
@@ -19,20 +21,26 @@ These are my current study topics.
 * NP-complete problems
 * Dynamic Programming
 * Machine Learning
-* Artificial Inteligence
+* Artificial Intelligence
 * Git
 
-#### Progarmming languages to improve 2020
+#### Programming languages to improve 2020
 
 * Python
 * GO
 * Clojure
+* ReactJS
 
 ## Books
 
 My list of Books for 2020 [link-to-book-roadmap](https://www.matheusfrancisco.com.br/roadmap/my-book-list/)
 
+* Clean code - [DONE]
+* Test driven development - Kent Beck [DONE]
+
+
 ## Websites
+
 
 
 ## Courses  (free)
@@ -49,10 +57,19 @@ My list of Books for 2020 [link-to-book-roadmap](https://www.matheusfrancisco.co
 
 ## Events for 2020
 
-
 ## Projects
 
 This is some codes to improve my skills with Python, Golang, Clojure, Javascript, C/C++ and stuffs like AWS Services.
+
+-----------------
+
+Projects to made in 2020
+
+* [Projects ideas to 2020](/projects-idea.md)
+
+------------------------
+
+Projects made in 2018-19
 
 
 * Learning about Django with testing [here](https://github.com/matheus-francisco/testing-using-Django/tree/master/budgetproject)
@@ -66,13 +83,11 @@ This is some codes to improve my skills with Python, Golang, Clojure, Javascript
 * Create a system to sell apartments basics.. POC [here](https://github.com/matheusfrancisco/air-ap-django)
 * My golang study [here](https://github.com/matheusfrancisco/my-codes-to-sudy-golang)
 * Build a simple application with TDD [here](https://github.com/matheusfrancisco/tdd-with-python)
-* Experimentals with Clojure POC [WIP]
-
+* Experimental with Clojure POC [WIP]
 * File System Ext3 Simulate POC [here](https://github.com/matheusfrancisco/file-system-ext3)
 * ARM Cortex M3 implementation libs to ARM [here](https://github.com/matheusfrancisco/arm-Cortex-M3)
 * Real Time Embedded Systems [here](https://github.com/matheusfrancisco/Real-Time-Embedded-Systems)
 * FFT and DFT in C [here](https://github.com/matheusfrancisco/Implementa-o-fft-dft<Paste>)
-
 * TodoApp using VueJs to learning vue [here](https://github.com/matheusfrancisco/Todo-app)
 * MLP in C to braile [here](https://github.com/matheusfrancisco/Multilayer-perceptron/blob/master/Multilayer-perceptron/mlp_braille.c)
 * Dashboard users in javascript vanilla [here](https://github.com/matheusfrancisco/some-simple-projects/tree/master/Projects/javascript/Dashboard-users-SPA)
