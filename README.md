@@ -26,10 +26,10 @@ These are my current study topics.
 
 #### Programming languages to improve 2020
 
-* Python
-* GO
-* Clojure
-* ReactJS
+* Python [study-list](/python-roadmap-studies.md)
+* Clojure [study-list](/clojure-studies.md)
+* ReactJS [study-list](/react-studies.md)
+* CSS3 and HTML5 [study-list](/css-html.md)
 
 ## Books
 
@@ -69,6 +69,8 @@ This is some codes to improve my skills with Python, Golang, Clojure, Javascript
 Projects to made in 2020
 
 * [Projects ideas to 2020](/projects-idea.md)
+* Django guide projects - [here](/)
+
 
 ------------------------
 

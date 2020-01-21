@@ -2,6 +2,8 @@
 
 This is some Ideas to implementing in my life.
 
+* Automatizatoin create repository with templates.
+* Reports Dashboard
 * RestAPI Meetup (Appointment)
 * RestAPI Weather
 * RestAPI Predict System [crack dam]
@@ -17,6 +19,8 @@ This is some Ideas to implementing in my life.
 * Podcast rank and comments.
 * PythonLib WebHooks
 * FunRetro clone
+
+* HTTP protocol implementation
 
 
 Social Projects
