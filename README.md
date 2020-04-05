@@ -28,18 +28,19 @@ These are my current study topics.
 
 * Python [study-list](/python-roadmap-studies.md)
 * Clojure [study-list](/clojure-studies.md)
-* ReactJS [study-list](/react-studies.md)
-* CSS3 and HTML5 [study-list](/css-html.md)
 
 ## Books
 
 My list of Books for 2020 [link-to-book-roadmap](https://www.matheusfrancisco.com.br/roadmap/my-book-list/)
 
-* Clean code - [DONE]
-* Test driven development - Kent Beck [DONE]
-
+* [x] Clean Code
+* [x] Test Drive Developemnt - Kent Beck
+* [ ] Refactoring (WIP)
+* [ ] Clojure for the Brave and true (WIP)
 
 ## Websites
+
+* [software-architecture-notes](/software-architecture)
 
 
 ## My favorite podcasts
@@ -48,21 +49,16 @@ My list of Books for 2020 [link-to-book-roadmap](https://www.matheusfrancisco.co
 
 ## Courses  (free)
 
-* Courser for 2020
-
-[Mathematics for computer science](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-fall-2010/index.htm)
-
-[Single Variable Calculus](https://ocw.mit.edu/courses/mathematics/18-01-single-variable-calculus-fall-2006/index.htm)
-
-[Algorithms](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/index.htm)
-
-[Advanced Algorithms](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-854j-advanced-algorithms-fall-2008/)
+* [ ] [Mathematics for computer science](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-fall-2010/index.htm)
+* [ ] [Single Variable Calculus](https://ocw.mit.edu/courses/mathematics/18-01-single-variable-calculus-fall-2006/index.htm)
+* [ ] [Algorithms](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/index.htm)
+* [ ] [Advanced Algorithms](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-854j-advanced-algorithms-fall-2008/)
 
 ## Events for 2020
 
 ## Projects
 
-This is some codes to improve my skills with Python, Golang, Clojure, Javascript, C/C++ and stuffs like AWS Services.
+This is some codes to improve my skills.
 
 -----------------
 
@@ -70,7 +66,6 @@ Projects to made in 2020
 
 * [Projects ideas to 2020](/projects-idea.md)
 * Django guide projects - [here](/)
-
 
 ------------------------
 
