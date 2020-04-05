@@ -7,12 +7,23 @@ This is some Ideas to  learning about programming.
 
 * Automatizatoin create repository with templates.
 * Reports Dashboard
+* Stage system Django
+
+## Guides to study
+
+* Clojure
+* Django
+* Testing
+* API
+
 
 ### API REST
 
 * RestAPI Meetup (Appointment)
 * RestAPI Weather
 * RestAPI Predict System [crack dam]
+
+* API Mentoring
 
 ### System clone idea
 
