@@ -40,7 +40,7 @@ My list of Books for 2020 [link-to-book-roadmap](https://www.matheusfrancisco.co
 
 ## Websites
 
-* [software-architecture-notes](/software-architecture)
+* [software-architecture-notes](/software-architecture-notes)
 
 
 ## My favorite podcasts
