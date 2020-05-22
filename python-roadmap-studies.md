@@ -11,29 +11,29 @@ We will follow these books to study and use TDD to develop our code :
 
 ## Projects
 
+* Api fights
 * Find new ideas
 * Api Rest to appintment meetup
 * Api Rest to like FunRetro
 * Lib to use git
 * Api rest django
-* WebHooks system
 
 ## Summary
 
 I will be skill de basics topics and start by itermediate
 
-- [ ] Modules
-    - [ ] Modules Basics, Packeges and Advanced Modulesdule Topics
-- [ ] Classes and OOP
-    - [ ] Basics
-    - [ ] Intermetiate concepts
+- [x] Modules
+    - [x] Modules Basics, Packeges and Advanced Modulesdule Topics
+- [x] Classes and OOP
+    - [x] Basics
+    - [x] Intermetiate concepts
     - [ ] Advanced concepts
-- [ ] Operator Overloading
-- [ ] Exceptions
-    - [ ] Exceptions Basics
+- [x] Operator Overloading
+- [x] Exceptions
+    - [x] Exceptions Basics
     - [ ] Designing with Exceptions
 - [ ] Managed Attributes
-- [ ] Decorators
+- [x] Decorators
 - [ ] Metaclasses
 
 

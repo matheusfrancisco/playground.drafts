@@ -19,13 +19,13 @@ This is some Ideas to  learning about programming.
 
 ### System clone idea
 
-* Zendesk Clone
-* Metabase Clone
-* FunRetro clone
+* Tickte's system like zendesk
+* Improve metabase to large data
+* Retrospective board
 * Finance System (Tracking)
 * System to trade stuffs
 * Podcast rank and comments link ListeNotes
-* Jira Clone
+* System like trello or jira with metrics systems
 * App stocks ( trade system )
 
 # Libs idea (packages)

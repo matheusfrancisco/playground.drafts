@@ -4,7 +4,6 @@ This is my roadmap to self improvement, I will  improve these topics more next y
 
 I will try to document all in my blog [matheusfrancisco](matheusfranciso.com.br).
 
-My goals and roadmap to focus in 2020 [matheusfrancisco](https://www.matheusfrancisco.com.br/roadmap/my-roadmap/)
 
 ## Subjects
 
@@ -12,14 +11,14 @@ These are my current study topics.
 
 #### Theoretical topics
 
-* Software Architecture
-* Domain Driven Design
+* Software Architecture ( Patterns, DDD, Microservices ... )
 * Test: unit, integration
 * Test driven development
 * RestAPI Architecture
 * Algorithm Complexity
 * NP-complete problems
 * Dynamic Programming
+* Data Structures
 * Machine Learning
 * Artificial Intelligence
 * Git
@@ -36,25 +35,14 @@ My list of Books for 2020 [link-to-book-roadmap](https://www.matheusfrancisco.co
 * [x] Clean Code
 * [x] Test Drive Developemnt - Kent Beck
 * [ ] Refactoring (WIP)
-* [ ] Clojure for the Brave and true (WIP)
-
-## Websites
-
-* [software-architecture-notes](/software-architecture-notes)
+* [x] Clojure for the Brave and true
+* [ ] Cracking coding interview (WIP)
 
 
 ## My favorite podcasts
 
 * List [podcasts](/podcast-list.md)
 
-## Courses  (free)
-
-* [ ] [Mathematics for computer science](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-fall-2010/index.htm)
-* [ ] [Single Variable Calculus](https://ocw.mit.edu/courses/mathematics/18-01-single-variable-calculus-fall-2006/index.htm)
-* [ ] [Algorithms](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/index.htm)
-* [ ] [Advanced Algorithms](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-854j-advanced-algorithms-fall-2008/)
-
-## Events for 2020
 
 ## Projects
 
@@ -66,6 +54,7 @@ Projects to made in 2020
 
 * [Projects ideas to 2020](/projects-idea.md)
 * Django guide projects - [here](/)
+* [Clojure projects here](/)
 
 ------------------------
 
