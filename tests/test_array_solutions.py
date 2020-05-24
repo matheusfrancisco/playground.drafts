@@ -1,4 +1,9 @@
-from solutions import is_unique, is_unique_with_counter, is_string_permutation
+from solutions import (
+    is_unique,
+    is_unique_with_counter,
+    is_string_permutation,
+    escape_spaces_urlfy,
+)
 
 
 def test_string_has_all_unique_characters_return_true():
@@ -23,3 +28,8 @@ def test_should_return_true_if_string2_is_premutation_string1():
 
 def test_should_return_false_if_string2_is_premutation_string1():
     assert is_string_permutation("matheus", "sam") is False
+
+
+def test_should_substitue_spaces():
+    expected = "Hi%20my%20name%20is%20Xico"
+    assert escape_spaces_urlfy(" Hi my name is Xico ") == expected

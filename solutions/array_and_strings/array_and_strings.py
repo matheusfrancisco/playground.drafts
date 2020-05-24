@@ -52,3 +52,7 @@ def is_string_permutation(string, string2):
         if counter[letter] == 0:
             del counter[letter]
     return len(counter) == 0
+
+
+def escape_spaces_urlfy(string):
+    return string.strip().replace(" ", "%20")
