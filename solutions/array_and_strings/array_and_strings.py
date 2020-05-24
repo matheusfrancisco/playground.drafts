@@ -56,3 +56,18 @@ def is_string_permutation(string, string2):
 
 def escape_spaces_urlfy(string):
     return string.strip().replace(" ", "%20")
+
+
+def string_compression(string):
+    """
+      Time complexity:
+        Best case: O(n logn)
+        Worst case: O(n)
+
+    """
+    if len(string) == 0:
+        return string
+    letters = Counter(string)
+    parts = [f"{letter}{count}" for letter, count in letters.items()]
+    compressed = "".join(parts)
+    return compressed
