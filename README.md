@@ -80,6 +80,9 @@ Projects made in 2018-19
 
 * Learning about Django with testing [here](https://github.com/matheus-francisco/testing-using-Django/tree/master/budgetproject)
 * Using OSM GRAPH to plot distance beteween multiple points POC [here](https://github.com/matheusfrancisco/OSM_GRAPH_DIJKSTRA)
+* Data structures in C [here](https://github.com/matheusfrancisco/computer-engineering-at-UFSC/tree/master/3th Semester/Data structure)
+* Dijsktra [here](https://github.com/matheusfrancisco/computer-engineering-at-UFSC/tree/master/4th Semester/Design and analysis of algorithms/Trabalho Dijsktra Versão final)
+* Big number multplication Karatsuba and Matrix multiplication Strassen [here](https://github.com/matheusfrancisco/computer-engineering-at-UFSC/tree/master/4th Semester/Design and analysis of algorithms/Multiplication Karatssuba and Matrix Strassen)
 * System to appointment services [here](https://github.com/matheusfrancisco/backend-appointment-app)
 * Learning how to using torando build a simple crud POC [here](https://github.com/matheusfrancisco/server-with-tornado-and-sqlalchemy)
 * Learning about design patterns in python [here](https://github.com/matheusfrancisco/design-patterns-python)
