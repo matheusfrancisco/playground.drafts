@@ -4,3 +4,4 @@ mypy
 pytest
 pytest-cov
 pytest-helpers-namespace
+pydsx==0.1.0
