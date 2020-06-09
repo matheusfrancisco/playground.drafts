@@ -1,1 +1,1 @@
-from .linked_list import remove_duplicates
+from .linked_list import remove_duplicates # noqa
