@@ -56,18 +56,14 @@ This is some codes to improve my skills all projects are POC.
 Projects to made in 2020
 
 * Projects ideas to 2020 [here](/projects-idea.md)
-* Clojure projects here [here](/)
-
 * Data structure study python [here](https://github.com/xico-labs/data_structures_and_algorithms_py)
 * Data structure study clojure [here]()
 * Solved problems coding cracking interview clojure [here](https://github.com/xico-labs/cracking-coding-interview-solutions-clj)
 * Solved problems coding cracking intereview python [here](https://github.com/xico-labs/cracking-coding-interview-solutions-python)
 * Study about design patterns [here](https://github.com/xico-labs/design-patterns-and-solid)
 * Clojure experimentals POC [here](https://github.com/matheusfrancisco/clojure-guide-to-study)
-
 * Improve my frontends skills React [here](https://github.com/matheusfrancisco/react-studies)
 * Improve my frontends skills css [here](https://github.com/matheusfrancisco/simple-projects-frontend)
-
 * Test: mocks in python [here](https://github.com/matheusfrancisco/understand-mocks-stubs-spy-in-python)
 * Experimentals using python [here](https://github.com/matheusfrancisco/pycodes)
 * POC with tornado [here](https://github.com/matheusfrancisco/server-with-tornado-and-sqlalchemy)
