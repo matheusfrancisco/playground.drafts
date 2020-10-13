@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b7b5241-0e52-40fc-98c8-d208c3bfd07b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/config/dev/user.clj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/anki/core_test.clj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,11 +64,13 @@
   <component name="ProjectId" id="1ineyu8aZWUuj1WkAc4e0iTak1G" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="cursive.last.file.extension./home/evohc/Files/projects/anki-clj/server/src" value="clj" />
     <property name="cursive.last.file.extension./home/evohc/Files/projects/anki-clj/server/test" value="clj" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
+  <component name="ReplState" timestamp="1602588766453">{:repl-history {:ide [], :local [{:command &quot;(ns anki.db.core\n  (:require [datomic.api :as d]))&quot;, :offset 50, :ns &quot;user&quot;} {:command &quot;(defn create-conn [db-uri]\n  (d/create-database db-ur)\n  (let [conn (d/connect db-uri)]\n       conn))\n&quot;, :offset 102, :ns &quot;anki.db.core&quot;} {:command &quot;conn&quot;, :offset 4, :ns &quot;user&quot;} {:command &quot;(prn conn)&quot;, :offset 10, :ns &quot;anki.db.core&quot;} {:command &quot;(def database-uri \&quot;datomic:sql://grok-development?jdbc:postgresql://localhost:5432/datomic?user=datomic&amp;password=datomic\&quot;)&quot;, :offset 122, :ns &quot;anki.db.core&quot;} {:command &quot;(ns anki.db.core\n  (:require [datomic.api :as d]\n            [anki.db.schema :refer [schema]]))&quot;, :offset 95, :ns &quot;user&quot;} {:command &quot;(def database-uri \&quot;datomic:sql://anki-development?jdbc:postgresql://localhost:5432/datomic?user=datomic&amp;password=datomic\&quot;)&quot;, :offset 122, :ns &quot;anki.db.core&quot;} {:command &quot;(defn create-conn [db-uri]\n  (d/create-database db-uri)\n  (let [conn (d/connect db-uri)]\n       conn))&quot;, :offset 102, :ns &quot;anki.db.core&quot;} {:command &quot;(def conn (create-conn database-uri))&quot;, :offset 37, :ns &quot;anki.db.core&quot;} {:command &quot;(def tx @(d/transact conn schema))&quot;, :offset 34, :ns &quot;anki.db.core&quot;}], :remote []}}</component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -99,6 +100,17 @@
       </ExternalSystemSettings>
       <method v="2" />
     </configuration>
+    <configuration name="REPL for server" type="ClojureREPL" factoryName="Local" activateToolWindowBeforeRun="false">
+      <module name="server" />
+      <setting name="replType" value="NREPL" />
+      <setting name="execution" value="DEPS" />
+      <setting name="jvmArgs" value="" />
+      <setting name="parameters" value="" />
+      <setting name="workingDir" value="$PROJECT_DIR$" />
+      <setting name="profiles" value="" />
+      <setting name="aliases" value="socket-repl" />
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="ClojureREPL" factoryName="Local" activateToolWindowBeforeRun="false">
       <setting name="replType" value="NREPL" />
       <setting name="execution" value="LEININGEN" />
@@ -123,7 +135,7 @@
       <setting name="namespace" value="" />
       <setting name="execution" value="DEPS" />
       <setting name="profiles" value="" />
-      <setting name="aliases" value="" />
+      <setting name="aliases" value="socket-repl" />
       <setting name="vmparams" value="" />
       <setting name="params" value="" />
       <setting name="workDir" value="$PROJECT_DIR$" />

@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  db_api:
+    image: postgres:11.6
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=datomic
+      - POSTGRES_PASSWORD=datomic
+      - POSTGRES_DB=datomic
