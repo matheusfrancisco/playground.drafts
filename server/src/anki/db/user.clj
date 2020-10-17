@@ -74,6 +74,12 @@
                      {:anki/error-id :server-error
                       :error "Unable to edit user"}))))
 
+;; delete a user
+(defn delete!
+  [conn user-id]
+  (when-let [user (fetch (d/db conn) user-id)]
+    (d/transact conn [[:db/retractEntity [:user/id user-id]]])
+     user))
 
 (comment
   (let [user-id (create! conn (gen/generate (s/gen ::user)))
