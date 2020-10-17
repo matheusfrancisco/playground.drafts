@@ -29,7 +29,7 @@
      string?
      #(s/gen #{"sadfasf" "safasfsadfas" "adfsafdafsafs"})))
 
-(s/def :user/id string?)
+(s/def :user/id uuid?)
 
 (s/def ::user
   (s/keys :req [:user/email :user/password]
