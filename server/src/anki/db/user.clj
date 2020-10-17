@@ -1,6 +1,7 @@
 (ns anki.db.user
   (:require [datomic.api :as d]
             ;[clojure.string :as str]
+            [anki.db.core :refer [conn]]
             [clojure.spec.alpha :as s]
             [clojure.test.check.generators :as gen]))
 
@@ -44,20 +45,38 @@
 (defn create! [conn user-params]
    (if (s/valid? ::user user-params)
      (let [user-id (d/squuid)
-           tx-data (merge {:user/id user-id} user-params)]
+           tx-data (merge user-params {:user/id user-id})]
         (d/transact conn [tx-data])
         user-id)
      (throw (ex-info "User is invalid"
                      {:anki/error-id :validation
                       :error "Invalid email or password provided"}))))
 
+
+;; fetch a user by id
+(defn fetch
+  ([db user-id]
+    (fetch db user-id '[*]))
+  ([db user-id pattern]
+   (d/q '[:find (pull ?uid pattern) .
+          :in $ ?user-id pattern
+          :where
+          [?uid :user/id ?user-id]]
+        db user-id pattern)))
+
+
 (comment
+
+  (let [user-id (create! conn (gen/generate (s/gen ::user)))
+        user (fetch (d/db conn) user-id '[*])]
+       (prn user))
+
   (def sample-user {:user/email    "matheusmachadoufsc@gmail.com"
                     :user/username "xico"
                     :user/password "123123"})
 
-  (s/valid? ::user sample-user)
 
+  (s/valid? ::user sample-user)
   ;;generated random data
   ;; with-gen and s/gen
 
@@ -65,7 +84,5 @@
   ;; 1/ spec
   ;; 2/ function
   (gen/generate (s/gen :user/email))
-
   ;;this is powerfull stuf
-  (gen/generate (s/gen ::user))
-  )
+  (gen/generate (s/gen ::user)))
