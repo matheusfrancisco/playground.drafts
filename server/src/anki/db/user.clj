@@ -52,7 +52,6 @@
                      {:anki/error-id :validation
                       :error "Invalid email or password provided"}))))
 
-
 ;; fetch a user by id
 (defn fetch
   ([db user-id]
@@ -64,9 +63,19 @@
           [?uid :user/id ?user-id]]
         db user-id pattern)))
 
+;; edit a user by ID
+(defn edit!
+   [conn user-id user-params]
+   (if-let [user (fetch (d/db conn) user-id)]
+     (let [tx-data (merge user-params {:user/id user-id})
+           db-after (:db-after @(d/transact conn [tx-data]))]
+        (fetch db-after user-id))
+     (throw (ex-info "Unable to update user"
+                     {:anki/error-id :server-error
+                      :error "Unable to edit user"}))))
+
 
 (comment
-
   (let [user-id (create! conn (gen/generate (s/gen ::user)))
         user (fetch (d/db conn) user-id '[*])]
        (prn user))
