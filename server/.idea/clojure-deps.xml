@@ -6,6 +6,11 @@
         <DepsProjectSettings>
           <option name="enabledAliases" value="test" />
           <option name="externalProjectPath" value="$PROJECT_DIR$" />
+          <option name="modules">
+            <set>
+              <option value="$PROJECT_DIR$" />
+            </set>
+          </option>
           <option name="useQualifiedModuleNames" value="true" />
         </DepsProjectSettings>
       </set>
