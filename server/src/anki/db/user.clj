@@ -1,17 +1,35 @@
 (ns anki.db.user
   (:require [datomic.api :as d]
-            [clojure.string :as str]
-            [clojure.spec.alpha :as s]))
+            ;[clojure.string :as str]
+            [clojure.spec.alpha :as s]
+            [clojure.test.check.generators :as gen]))
 
 ;pattern #"^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
 (defn validate-email [email]
   (let [email-regex #".+\@.+\..+"]
      (re-matches email-regex email)))
 
-(s/def :user/password (s/and string? #(>= (count %) 6)))
-(s/def :user/username string?)
-(s/def :user/email (s/and string? validate-email))
-(s/def :user/token string?)
+(s/def :user/password
+  (s/with-gen
+    (s/and string? #(>= (count %) 6))
+    #(s/gen #{"123123" "123123123" "1231412444"})))
+
+(s/def :user/username
+  (s/with-gen
+    string?
+    #(s/gen #{"Xico" "Xiquinho"})))
+
+(s/def :user/email
+  (s/with-gen
+    (s/and string? validate-email)
+    #(s/gen #{"xico@gmail.comm" "xicolino@gmail.com"})))
+
+(s/def :user/token
+  (s/with-gen
+     string?
+     #(s/gen #{"sadfasf" "safasfsadfas" "adfsafdafsafs"})))
+
+(s/def :user/id string?)
 
 (s/def ::user
   (s/keys :req [:user/email :user/password]
@@ -34,8 +52,20 @@
                       :error "Invalid email or password provided"}))))
 
 (comment
-  (def sample-user {:user/email "matheusmachadoufsc@gmail.com"
+  (def sample-user {:user/email    "matheusmachadoufsc@gmail.com"
                     :user/username "xico"
                     :user/password "123123"})
 
-  (s/valid? ::user sample-user))
+  (s/valid? ::user sample-user)
+
+  ;;generated random data
+  ;; with-gen and s/gen
+
+  ;; with-gen accepts two args
+  ;; 1/ spec
+  ;; 2/ function
+  (gen/generate (s/gen :user/email))
+
+  ;;this is powerfull stuf
+  (gen/generate (s/gen ::user))
+  )
