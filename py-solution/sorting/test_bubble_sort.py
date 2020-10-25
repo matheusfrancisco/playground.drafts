@@ -1,6 +1,13 @@
 
 
 def bubble_sort(array):
+    """
+       write a function that takes in an array of int and returns a sorted version of that array.
+       Use the bubble sort algorithm to sort the array.
+
+       Space O(1)
+       Time O(n^2)
+    """
     is_sorted = False
     counter = 0
     while not is_sorted:
