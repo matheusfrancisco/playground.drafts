@@ -5,6 +5,13 @@ def test_logest_palindromic_substring():
 
 
 def longest_palindromic_substring(string):
+    """
+      Write a function that given a string,
+      returns its longest palindromic substring
+      Complexity Time O(n^2)
+      Space O(1)
+
+    """
     current_longest_palindromic = [0, 1]
     for i in range(1, len(string)):
         odd = get_longest_palindrome_from(string, i - 1, i + 1)
