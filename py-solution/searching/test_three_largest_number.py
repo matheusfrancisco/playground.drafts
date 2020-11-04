@@ -1,6 +1,10 @@
 
 def find_three_largest_numbers(array):
     """
+      Write a function that takes in an array of at least three integers and,
+      without sorting the input array, returns a sorted array of the three
+      largest intergers in the input array.
+
       Time: O(n)
       Complexity O(1)
 
