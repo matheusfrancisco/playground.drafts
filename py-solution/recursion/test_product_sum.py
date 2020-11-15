@@ -1,5 +1,3 @@
-
-
 def product_sum(array, multiplier = 1):
     s = 0
     for element in array:
