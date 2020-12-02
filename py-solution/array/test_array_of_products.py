@@ -36,13 +36,70 @@ def array_of_products_non_opt_solution(array):
     return output_array
 
 
-# TODO implement opt solution
+def brute_force_solution(array):
+    """
+      Time: O(n^2)
+      Space: O(n)
+    """
+    products = [1 for _ in range(len(array))]
+    for i in range(len(array)):
+        running_product = 1
+        for j in range(len(array)):
+            if i != j:
+                running_product *= array[j]
+        products[i] = running_product
+    return products
+
+
+def array_of_products_clean(array):
+    """
+      Time: O(n)
+      Space: O(n)
+    """
+    products = [1 for _ in range(len(array))]
+
+    left_running_product = 1
+    for i in range(len(array)):
+        products[i] = left_running_product
+        left_running_product *= array[i]
+
+    right_running_product = 1
+    for i in reversed(range(len(array))):
+        products[i] *= right_running_product
+        right_running_product *= array[i]
+
+    return products
+
+
 def array_of_products(array):
-    return array_of_products_non_opt_solution(array)
+    """
+      Time: O(n)
+      Space: O(n)
+    """
+    products = [1 for _ in range(len(array))]
+    left_products = [1 for _ in range(len(array))]
+    right_products = [1 for _ in range(len(array))]
+
+    left_running_product = 1
+    for i in range(len(array)):
+        left_products[i] = left_running_product
+        left_running_product *= array[i]
+
+    right_running_product = 1
+    for i in reversed(range(len(array))):
+        right_products[i] = right_running_product
+        right_running_product *= array[i]
+
+    for i in range(len(array)):
+        products[i] = left_products[i] * right_products[i]
+
+    return products
 
 
 def test_array_of_products():
     array = [5, 1, 4, 2]
     output = [8, 40, 10, 20]
     assert array_of_products(array) == output
+    assert brute_force_solution(array) == output
+    assert array_of_products_clean(array) == output
     assert array_of_products_non_opt_solution(array) == output
