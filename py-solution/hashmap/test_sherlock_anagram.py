@@ -30,7 +30,8 @@ def sherlock(words):
       get_all_substrings : TIME O(n^2)
       is_anagram : TIME O(n)
 
-      TIME O(n^2 * n* log n)
+      TIME O(n^2) + O(* n* log n)
+      Space: O(n^2)
     """
     substrings = get_all_substrings(words)
     count = 0
@@ -51,9 +52,32 @@ def sherlock(words):
     return count//2
 
 
+def sherlock_anagrams(word):
+    """
+      Time: O(n^2 * nlogn)
+      Space: O(n^2)
+    """
+    size = len(word)
+    occ = {}
+    for i in range(size):
+        sub_string = ''
+        for j in range(i, size):
+            sub_string = ''.join(sorted(sub_string + word[j]))
+            occ[sub_string] = occ.get(sub_string, 0)
+
+            occ[sub_string] += 1
+
+    anagrams = 0
+
+    for k, v in occ.items():
+        anagrams += (v*(v-1))//2
+    return anagrams
+
+
 def test_sherlock_anagrams():
     string = "abb"
     assert get_all_substrings("abb") == ["a", "ab", "abb", "b", "bb", "b"]
     assert is_anagram("ab", "ba") is True
     assert is_anagram("a", "ba") is False
     assert sherlock(string) == 1
+    assert sherlock_anagrams(string) == 1
