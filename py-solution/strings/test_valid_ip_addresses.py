@@ -23,6 +23,10 @@
 
 
 def valid_ip_addreses(string):
+    """
+      Time O(1)
+      Space O(1)
+    """
     valids_ips = []
     for i in range(1, min(len(string), 4)):
         current_ip_address_parts = ['', '', '', '']
