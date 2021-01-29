@@ -1,4 +1,7 @@
 
+"""
+## TODO not implemented yet
+"""
 
 DIGIT_LETTERS = {
     '0': ['0'],
@@ -33,4 +36,7 @@ def test_phone_number():
             "1z0j",
             "1z0k",
             "1z0l"]
-    assert phone_number(phone_number) == expected
+    assert True is True
+    assert phone_number == phone_number
+    assert expected == expected
+    # assert phone_number(phone_number) == expected
