@@ -1,53 +1,43 @@
-# My Roadmap to self improvement
+# My Roadmap to self improvement (WIP)
 
-This is my roadmap to self improvement, I will  improve these topics.
+This is my roadmap to self improvement.
+Some topics that I want to learning this year 2021.
 
-I will try to document all in my blog [matheusfrancisco](matheusfranciso.com.br) and youtube [channel](https://www.youtube.com/channel/UCF2kYwHZ8oaMLetO5icB38g?view_as=subscriber)
+### Topics
 
+* Programming: Clojure (learning about whole clj world), Rust, Haskell, Elixir
+* Protocols: gRPC, RPC
+* Infra: +Kubernets, +Git
+* Web: WebAssembly
+* Agiles: TDD, DDD
+* Improve some topics:  Software Architecture (skills), Patterns, DDD, Microservices, Test(Unit, Integration, Contract, E2E)
+* Computer Science: Data Structures, Algorithm Complexity, Dynamic Programming, NP-complete problems
 
-## Subjects
-
-These are my current study topics.
-
-#### Theoretical topics
-
-* Software Architecture ( Patterns, DDD, Microservices,  )
-* Test: unit, integration
-* Test driven development
-* RestAPI Architecture
-
-* Data Structures
-* Algorithm Complexity
-  * Dynamic Programming
-  * NP-complete problems
-
-* Machine Learning
-* Artificial Intelligence
-* Git
-
-#### Programming languages to improve 2020
-
-* Python [study-list](/python-roadmap-studies.md)
-* Clojure [study-list](/clojure-studies.md)
-
-## Books
+Starting learning about: Machine Learning, Artificial Intelligence, Genetic Algorithms
 
 
-* [x] Clean Code
-* [ ] Clean Architecture
+## What book I'm learning.
+
+* [ ] 14 Habits of Highly Productive Developers by Zeno Rocha. (almost finish)
+* [ ] Domain drive design (started but not finished yet)
+* [ ] Design Patterns (started but not finished yet)
+* [ ] Clean Architecture (started but not finished yet)
+* [ ] Cracking coding interview (solve some problems)
+* I'll put non tech books here
+
+## What I read this year
+* [x] Refactoring
 * [x] Test Drive Developemnt - Kent Beck
-* [ ] Refactoring (WIP)
+* [x] Joy of Clojure
 * [x] Clojure for the Brave and true
-* [ ] Cracking coding interview (WIP)
-* [ ] Domain drive design (WIP)
-* [ ] Design Patterns
-* [ ] Joy of Clojure (WIP)
-* [ ] Python Fluent (WIP)
+* [x] Clean Code
+* I'll put non tech books here
 
 send me recomendation: m@matheusfrancisco.com.br
+send me recomendation: matheusmachadoufsc@gmail.com
 
 
-## Projects
+## Projects POC's open code
 
 This is some codes to improve my skills all projects are POC.
 
@@ -55,7 +45,6 @@ This is some codes to improve my skills all projects are POC.
 
 Projects to made in 2020
 
-* Projects ideas to 2020 [here](/projects-idea.md)
 * Data structure study python [here](https://github.com/xico-labs/data_structures_and_algorithms_py)
 * Data structure study clojure [here]()
 * Solved problems coding cracking interview clojure [here](https://github.com/xico-labs/cracking-coding-interview-solutions-clj)
