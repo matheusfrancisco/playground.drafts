@@ -1,0 +1,135 @@
+# A spec/protocol/collection of software to publish data on Companies and their "stuff"
+
+The idea is to have something that does roughly what Glassdoor and friends do, but
+in a decentralized and distributed way. To accomplish this, we'll define a way
+to store and share data, to then be able to aggregate and search it.
+
+From now on I'll call the whole thing "MERA" for no reason other than I need something
+to call the thing and I didn't have any better ideas. #fightme
+
+## A user's identity
+
+To participate in "the network", i.e. to contribute with adding data to it, you'll
+need an identity, something that cryptographically identifies you in the network.
+
+Basically you'd create your credentials that are comprised of a public id and your
+public and private signing keys. Something like so:
+
+    $ mera new-identity
+	> Type your password: *****
+	> Re-type your password: *****
+	Identity created at $XDG_CONFIG_HOME/mera/identity
+	Public ID: 71c0d9e724f3051d6d1755cb148bcb74f815f2a3b0698311e6d9a4fc22e405e6
+	Public Key: RWSvUZXnw9gUb70PdeSNnpSmodCyIPJEGN1wWr+6Time1eP7KiWJ5eAM
+
+Your public id is what will be in your feed (more on that below) when you share
+it with other people in the network. For someone to express their trust on you,
+they'll need both your public id and public keys. Mera won't share your public key
+in any way, you'll need to exchange public keys using other medium.
+
+Anyway, this will be what identifies you as you. Notice it doesn't have your
+name, e-mail, anything. It's on you to keep yourself private, so be mindful
+of where and how your share your feed so that you keep yourself anonymous.
+
+Here the identities are created using signify/minisign, which employ Ed25519.
+Much, much simpler than gpg, and likely more than enough for our use cases.
+
+## Adding data to the database
+
+Mera's database is available at `$XDG_DATA_HOME/mera/feeds/`, with each feed
+being identified by its public id. So for the credentials above, the feed would
+be `$XDG_DATA_HOME/mera/feeds/71/c0d9e724f3051d6d1755cb148bcb74f815f2a3b0698311e6d9a4fc22e405e6`
+(notice the public id is `71c0d9...`).
+
+Each feed represents data from a single person, and is an append only log
+where each entry references the previous one (in a *scoffs* blockchain fashion,
+if you will). Something like this:
+
+	signature: b3fac4a793f076e1f04538836d8fd0ebd9f50bc8ee6911f96ae2be40f935aa73
+	{ id: ffde30e1042b8edf8058afc9115fb3c98012186cebd559bd093fed0f26e8fde1
+	  parent: nil
+	  type: employee-review
+	  created-at: (timestamp)
+	  (...) }
+
+	signature: f85cbc11c3a82859f219915fafd05e52f2923b50a7b6f53f87ba05c1e51de9d6
+	{ id: 4bfb9cad05efb3a908da3ecb42ca47fc1b909331a0189d04a7faacd01183623c
+	  parent: ffde30e1042b8edf8058afc9115fb3c98012186cebd559bd093fed0f26e8fde1
+	  type: salary
+	  created-at: (timestamp)
+	  (...) }
+
+And so on. Each row will also be signed with the user's credentials. This is
+to avoid problems regarding tampering, so long as someone trusts whoever
+wrote this feed.
+
+This is somewhat simple so that it is easier to extend and easier to share.
+
+Because data can't be deleted (more on that below), if you want to rectify,
+update or even "delete" previously added data, you'll have to do that
+by adding new entries to it. Data can't be deleted, so you can only
+ask for a certain previous entry to be disregarded by peers. This might
+be unfortunate, but it is the cost of having a distributed network.
+
+## Trusting someone else
+
+You can trust someone by doing this:
+
+	$ mera trust (their public id) (their public key)
+
+This will merely add them as a trusted peer to the local database, adding
+a trust statement to your feed so whoever consumes your data knows you
+trust that person.
+
+You'd have to find a way to retrieve their feed as well. They can simply expose
+their feed (the same file we've introduced before) through plain HTTP, so:
+
+	$ mera add-feed https://url.to.their.feed/
+
+Or, simply:
+
+	$ mera trust (their public id) (their public key) --feed https://url.to.their.feed/
+
+Simply put, you'll copy their feeds to your local database. If you also
+have their public key, you can validate their data as well. You can also
+add a feed from someone you still don't trust, and the system should
+still work well.
+
+## Gossip
+
+Because you not only own your own feed, but keeps the feeds of others as well,
+mera will implement a gossip protocol. It can be as simple as hitting a URL
+and getting all feeds that this URL contains.
+
+Once downloaded, you can disambiguate - that is, reconcile the feeds you
+already have and add the feeds that are new. Because your data will be copied
+pretty much everywhere, deletion of entries is not an option. If you do
+that, it'll raise a flag on other peers' databases that may or may not
+end up with a warning on your credential, potentially marking all you
+write under said credential as untrustworthy.
+
+Untrustworthiness is a statement, that is, something you say about someone
+or something. It is added to your feed, and then shared to whoever consumes
+your feed, and so on and so forth. A robust system will disregard any
+data from people deemed untrustworthy by either people you trust or
+people within a certain range of your web of trust, so keep that in mind.
+
+## Relays and analyzing and querying data
+
+So each person has some credentials and a database with a bunch of feeds,
+including their own, right? It is expected to have a way for people to
+congregate and easily share their feeds with one another. That's what
+relay servers are for.
+
+Strictly speaking, relays are just another credential on the network
+- that is, they have a public id and share data using the same protocols
+as one would do when sharing with another person. But they're public
+and easily reachable.
+
+As for querying data, the cli itself could help with that by allowing
+you to filter and search your own local database, but we can do better:
+an online server, most likely a relay server, can have a nice interface
+not unlike what Glassdoor provides that will present all information
+in a way that makes sense. That is, said server will constantly index
+and arrange all the feeds in a way that is optimized for querying
+and for consumption.

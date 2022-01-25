@@ -1,0 +1,44 @@
+#https://gist.github.com/lsmag/d2a4858010ab3535fd802f092b8d3495
+version: "3.8"
+services:
+  repl:
+    &patchforge-base
+    image: dev.patchforge:1 # allows image to be reused, as well as rebuilt if we change version number
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "4444:4444" # nrepl
+      - "5000:5000" # http
+    environment:
+      DATABASE_URL: jdbc:postgresql://db:5432/patchforge?user=postgres&password=postgrespassword
+      TEST_DATABASE_URL: jdbc:postgresql://db:5432/patchforge_test?user=postgres&password=postgrespassword
+      HTTP_PORT: 5000
+      MAIL_HOST: localhost
+      MAIL_PORT: 25
+    volumes:
+      - ./:/opt/app
+      - ._docker_m2/:/root/.m2
+    depends_on:
+      - db
+      - mail
+    command: ["./etc/wait-for-it.sh", "db:5432", "-t", "90", "--strict", "--",
+              "lein", "repl", ":headless", ":host", "0.0.0.0", ":port", "4444"]
+
+  web:
+    << : *patchforge-base
+    command: ["./etc/wait-for-it.sh", "db:5432", "-t", "90", "--strict", "--",
+              "lein", "run"]
+
+  db:
+    image: postgres:14-alpine
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: postgrespassword
+    volumes:
+      - ._docker_postgres/:/var/lib/postgresql/data
+
+  mail:
+    image: maildev/maildev
+    ports:
+      - "8000:80"
