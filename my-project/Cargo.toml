@@ -4,5 +4,24 @@ version = "0.1.0"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[[bin]]
+name = "ownership"
+path = "src/ownership.rs"
+
+[[bin]]
+name = "borrow"
+path = "src/borrow_mutability.rs"
+
+[[bin]]
+name = "pattern"
+path = "src/pattern_borrow.rs"
+
+[[bin]]
+name = "hashmap"
+path = "src/hashmap.rs"
+
+[[bin]]
+name = "net"
+path = "src/network.rs"
 
 [dependencies]

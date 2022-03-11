@@ -189,9 +189,131 @@ fn _flow() {
     }
 }
 
+enum HockeyPosition {
+    Center,
+    Wing,
+    Defense,
+    Goalie,
+}
+
+fn next_player (position: HockeyPosition) {
+    // passing
+}
+//could hold multiple tuple of data
+enum Clock {
+    Sundial(u8),
+    Digital(u8, u8),
+    Analog(u8, u8, u8),
+}
+
+fn tell_time(clock: Clock) {
+    match clock {
+        Clock::Sundial(hours) => println!("It is about {} o´clock", hours),
+        Clock::Analog(hours, minutes, seconds) => println!("It is {} minutes and {} seconds past {} o´clock", minutes, seconds, hours),
+        Clock::Digital(hours, minutes) => println!("It is {} minutes past  {}", minutes, hours),
+    }
+}
+
+struct HockeyPlayer {
+    name: String,
+    number: u8,
+    position: HockeyPosition,
+    goals_ytd: u8,
+}
+
+fn make_hockey_player () -> HockeyPlayer {
+    let player = HockeyPlayer {
+        name: String::from("Bryan Rust"),
+        number: 14,
+        position: HockeyPosition::Wing,
+        goals_ytd: 7,
+    };
+
+    return player;
+}
+
+struct Triangle(u32, u32, u32);
+
+fn is_equilateral(triangle: Triangle) -> bool {
+    triangle.0 == triangle.1 && triangle.1 == triangle.2
+}
+
+impl HockeyPlayer {
+    fn new(name: String, number: u8, position: HockeyPosition) -> HockeyPlayer {
+        HockeyPlayer {
+            name: name,
+            number: number,
+            position: position,
+            goals_ytd: 0,
+        }
+    }
+    //using &self is to method that only read the values
+    fn shoot_puck(&self, seconds_remaning: u16) {
+        if seconds_remaning < 300 {
+            match self.position {
+                HockeyPosition::Center => println!("Gooal"),
+                _ => {}
+            }
+        } else {
+            println!("Goal");
+        }
+    }
+
+    fn shoot_puck_mut(&mut self, seconds_remaning: u16) {
+        if seconds_remaning < 300 {
+            match self.position {
+                HockeyPosition::Center => {
+                    self.goals_ytd += 1;
+                    println!("Gooal")
+                },
+                _ => {}
+            }
+        } else {
+            self.goals_ytd += 1;
+            println!("Goal");
+        }
+    }
+}
+
+
+fn structs_enum() {
+    // Enum
+    tell_time(Clock::Analog(9, 25, 45));
+
+    // Struct
+
+    let player = make_hockey_player();
+    println!("{}", player.name);
+    let _t = Triangle(3, 4, 5);
+    is_equilateral(_t);
+
+    // enum
+    enum _Clock {
+        Sundial { hours: u8 },
+        Digital { hours: u8, minutes: u8 },
+        Analog  { hours: u8, minutes: u8, seconds: u8 },
+    }
+
+    let _c = _Clock::Analog {
+        hours: 9,
+        minutes: 24,
+        seconds: 3,
+    };
+    //methods to behaivors
+    let mut player2 = HockeyPlayer::new(String::from("Xico"), 18, HockeyPosition::Center);
+    //method to read
+    // method to write
+    //
+    player2.shoot_puck(1000);
+    player2.shoot_puck(12233);
+    player2.shoot_puck_mut(12233);
+}
+
 fn main() {
     _main();
     square(2);
     _flow();
+    structs_enum();
+
 
 }
