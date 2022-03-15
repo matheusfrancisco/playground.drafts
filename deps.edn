@@ -1,0 +1,6 @@
+{:deps    {org.clojure/clojure          {:mvn/version "1.10.2"}
+           org.clojure/data.priority-map {:mvn/version "1.1.0"}}
+ :aliases {:q1 {:exec-fn q1/-main
+                :replace-paths ["."]}
+           :q2 {:exec-fn q2/-main
+                :replace-paths ["."]}}}
