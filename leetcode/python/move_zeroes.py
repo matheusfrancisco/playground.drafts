@@ -5,7 +5,7 @@ class Solution:
         for _ in range(nzeros):
             nums.remove(0)
             nums.append(0)
-        return nums
+        return num
 
     def move_translad_zeros(self, nums):
         start = 0
