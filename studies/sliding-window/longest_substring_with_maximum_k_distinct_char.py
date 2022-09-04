@@ -36,10 +36,13 @@ In each step, we will try to shrink the window from the beginning if the count o
 While shrinking, we’ll decrement the character’s frequency going out of the window and remove it from the HashMap if its frequency becomes zero.
 At the end of each step, we’ll check if the current window length is the longest so far, and if so, remember its length.
 
+Time complexity O(N)
+Space O(N)
 """
 
 
 def solution(s, k):
+
     start = 0
     max_len = 0
     freq = {}
