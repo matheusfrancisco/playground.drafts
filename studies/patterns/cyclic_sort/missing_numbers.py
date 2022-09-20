@@ -1,18 +1,20 @@
 from typing import List
 
 
-def find_disappeared_numbers(self, nums: List[int]) -> List[int]:
-    i = 0
-    while i < len(nums):
-        x = nums[i]
-        if x != (i+1) and x <= len(nums) and x != nums[x-1]:
-            nums[i] = nums[x-1]
-            nums[x-1] = x
+def find_disappeared_number(nums: List[int]) -> List[int]:
+    i, n = 0, len(nums)
+    print(n)
+    while i < n:
+        j = nums[i]
+        if nums[i] < n and nums[i] != nums[j]:
+            nums[i], nums[j] = nums[j], nums[i]  # swap
         else:
             i += 1
 
-    out = []
-    for i, n in enumerate(nums):
-        if i != n-1:
-            out.append(i+1)
-    return out
+    for i in range(n):
+        if i != nums[i]:
+            return i
+    return n
+
+
+assert 7 == find_disappeared_number([8, 3, 5, 2, 4, 6, 0, 1])
