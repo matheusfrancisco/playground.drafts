@@ -15,6 +15,46 @@ class Node:
 
 
 def reverse_sub_list(head, p, q):
+    if p == q:
+        return head
+
+    # after skipping 'p-1' nodes, current will point to 'p'th node
+    curr, prev = head, None
+    i = 0
+    while curr is not None and i < p - 1:
+        prev = curr
+        curr = curr.next
+        i += 1
+
+    # we are interested in three parts of the LinkedList, the part before index 'p',
+    # the part between 'p' and 'q', and the part after index 'q'
+
+    last_node_of_first_part = prev
+    # after reversing the LinkedList 'current' will become the last node of the sub-list
+    last_node_of_sub_list = curr
+    nxt = None  # will be used to temporarily store the next node
+    i = 0
+    # reverse nodes between 'p' and 'q'
+    while curr is not None and i < q - p + 1:
+        nxt = curr.next
+        curr.next = prev
+        prev = curr
+        curr = nxt
+        i += 1
+
+    # connect with the first part
+    if last_node_of_first_part is not None:
+        # 'previous' is now the first node of the sub-list
+        last_node_of_first_part.next = prev
+
+    # this means p == 1 i.e.,
+    # we are changing the first node (head) of the LinkedList
+    else:
+        head = prev
+    # connect with the last part
+    last_node_of_sub_list.next = curr
+    return head
+
     return None
 
 
