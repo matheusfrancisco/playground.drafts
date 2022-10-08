@@ -31,17 +31,17 @@ def climb(n: int, k: int) -> int:
     time complexity O(nk)
     space complexity O(n)
     """
-    dp = [0] * (n + 1)
+    dp = [0] * k
     dp[0] = 1
-    dp[1] = 1
 
-    for i in range(2, n + 1):
-        for j in range(1, k + 1):
+    for i in range(1, n + 1):
+        for j in range(1, k):
             if i - j < 0:
                 continue
-            dp[i] += dp[i-j]
+            dp[i % k] += dp[(i-j) % k]
 
-    return dp[n]
+    return dp[n % k]
 
 
 assert climb(5, 3) == 13
+
