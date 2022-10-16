@@ -5,8 +5,6 @@ find the length of the longest contiguous subarray having all 1s.
 """
 
 def solution(arr, k):
-    
-
 
 
 assert 6 == solution([0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1], 2)
