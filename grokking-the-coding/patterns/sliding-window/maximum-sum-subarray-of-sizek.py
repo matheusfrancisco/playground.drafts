@@ -42,5 +42,7 @@ def max_sub_array_of_size_k(k, arr):
     return max_
 
 
+
+
 assert 9 == solution([2, 1, 5, 1, 3, 2], 3)
 assert 9 == max_sub_array_of_size_k(3, [2, 1, 5, 1, 3, 2])
