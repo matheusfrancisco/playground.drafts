@@ -27,10 +27,30 @@ def find_square(num):
         num //= 10
     return _sum
 
+def is_happy_number(n):
+    slow, fast = n, sum_digits(n)
+    while slow != fast:
+        slow = sum_digits(slow)
+        fast = sum_digits(sum_digits(fast))
+
+    if slow == 1 or fast == 1:
+        return True
+
+    return False
+
+def sum_digits(number):  # Helper function that calculates the sum of digits.
+    total_sum = 0
+    while number > 0:
+        digit = number % 10
+        number = number // 10
+        total_sum += digit ** 2
+    return total_sum
 
 def main():
     print(find_happy_number(23))
     print(find_happy_number(12))
+
+    print(is_happy_number(19))
 
 
 main()

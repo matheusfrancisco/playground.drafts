@@ -92,3 +92,38 @@ def calculate_cycle_length(slow):
         if current == slow:
             break
     return cycle_length
+
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+
+class Solution:
+    def hasCycle(self, head: Optional[ListNode]) -> bool:
+        return self.detect_cycle(head)
+#         visited = set()
+
+#         node = head
+#         while node is not None:
+#             if node in visited:
+#                 return True
+#             else:
+#                 visited.add(node)
+#                 node = node.next
+
+#         return False
+
+    def detect_cycle(self, head):
+        if not head:
+            return False
+
+        slow = head
+        fast = head.next
+        while slow and slow != fast:
+            if not fast or not fast.next:
+                return False
+            slow = slow.next
+            fast = fast.next.next
+
+        return True
