@@ -1,0 +1,27 @@
+Graph Notes
+
+Operation
+Adjacency List    Time Complexity
+Add Vertex        O(1)
+Remove Vertex     O(V+E)
+Add Edge          O(1)
+Search            O(V)
+BFS (Breadth First Serach)          O(V+E)
+DFS (Breadth First Serach)          O(V+E)
+
+Adjacency List
+Adding an edge in adjacency lists takes constant time as we only need to insert at the head node of the corresponding vertex.
+
+Removing an edge takes O(E) time because, in the worst case, all the edges could be at a single vertex and hence,
+we would have to traverse all E edges to reach the last one.
+
+Removing a vertex takes O(V + E) time because we have to delete all its edges and then reindex the rest of the list 
+one step back in order to fill the deleted spot.
+
+Searching an edge between a pair of vertices can take up to O(V) if all V nodes are present 
+at a certain index and we have to traverse them.
+
+Adjacency Matrix
+Edge operations are performed in constant time as we only need to manipulate the value in the particular cell.
+Vertex operations are performed in O(V2) since we need to add rows and columns. We will also need to fill all the new cells.
+Searching an edge is O(1) because we can access each edge by indexing.
