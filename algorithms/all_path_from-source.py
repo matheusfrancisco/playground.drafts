@@ -1,6 +1,7 @@
 # Time O(2^N * N)
 # Spac O(N)
 
+from typint import List
 class Solution:
     def allPathsSourceTarget(self, graph: List[List[int]]) -> List[List[int]]:
 
