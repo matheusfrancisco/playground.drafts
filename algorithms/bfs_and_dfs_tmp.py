@@ -14,7 +14,7 @@ class Graph:
 
 
 def bfs(g, source):
-    ut = [source]
+    out = [source]
     q = deque([source])
     visited = set()
     visited.add(source)
@@ -28,6 +28,22 @@ def bfs(g, source):
                 q.append(nbr)
     return out
 
+def dfs(g, source, visited):
+    out = []
+    q = deque()
+    q.append(source)
+    visited.add(source)
+
+    while q:
+        curr = q.pop()
+        out.append(curr)
+
+        for nbr in g.array[curr]:
+            if nbr not in visited:
+                q.append(nbr)
+                visited.add(nbr)
+    return out
+
 
 if __name__ == "__main__":
     g = Graph(4, True)
@@ -36,4 +52,4 @@ if __name__ == "__main__":
     g.add_edge(1, 3)
     g.add_edge(2, 3)
     print(bfs(g, 0))
-
+    print(dfs(g, 0, set()))
