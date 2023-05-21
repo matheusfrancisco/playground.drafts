@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2b7b5241-0e52-40fc-98c8-d208c3bfd07b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/anki/db/user.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/anki/db/user.clj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/anki/db/user_test.clj" beforeDir="false" afterPath="$PROJECT_DIR$/test/anki/db/user_test.clj" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DepsLocalSettings">
+    <option name="availableProjects">
+      <map>
+        <entry>
+          <key>
+            <ExternalProjectPojo>
+              <option name="name" value="server" />
+              <option name="path" value="$PROJECT_DIR$" />
+            </ExternalProjectPojo>
+          </key>
+          <value>
+            <list>
+              <ExternalProjectPojo>
+                <option name="name" value="server" />
+                <option name="path" value="$PROJECT_DIR$" />
+              </ExternalProjectPojo>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="modificationStamps">
+      <map>
+        <entry key="$USER_HOME$/.clojure/deps.edn" value="0" />
+        <entry key="$PROJECT_DIR$" value="4727609067028" />
+        <entry key="$PROJECT_DIR$/deps.edn" value="1135145524" />
+        <entry key="/usr/local/lib/clojure/deps.edn" value="954043921" />
+      </map>
+    </option>
+    <option name="projectSyncType">
+      <map>
+        <entry key="$PROJECT_DIR$" value="RE_IMPORT" />
+      </map>
+    </option>
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Clojure Namespace" />
+        <option value="Clojure Test Namespace" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1ineyu8aZWUuj1WkAc4e0iTak1G" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="cursive.last.file.extension./home/evohc/Files/projects/anki-clj/server/src" value="clj" />
+    <property name="cursive.last.file.extension./home/evohc/Files/projects/anki-clj/server/test" value="clj" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="anki" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/anki/db" />
+      <recent name="$PROJECT_DIR$/test/anki/db" />
+      <recent name="$PROJECT_DIR$/test/db" />
+      <recent name="$PROJECT_DIR$/anki/test" />
+    </key>
+  </component>
+  <component name="ReplState" timestamp="1602975871450">{:repl-history {:ide [], :local [{:command &quot;(ns anki.db.core\n  (:require [datomic.api :as d]))&quot;, :offset 50, :ns &quot;user&quot;} {:command &quot;(defn create-conn [db-uri]\n  (d/create-database db-ur)\n  (let [conn (d/connect db-uri)]\n       conn))\n&quot;, :offset 102, :ns &quot;anki.db.core&quot;} {:command &quot;conn&quot;, :offset 4, :ns &quot;user&quot;} {:command &quot;(prn conn)&quot;, :offset 10, :ns &quot;anki.db.core&quot;} {:command &quot;(def database-uri \&quot;datomic:sql://grok-development?jdbc:postgresql://localhost:5432/datomic?user=datomic&amp;password=datomic\&quot;)&quot;, :offset 122, :ns &quot;anki.db.core&quot;} {:command &quot;(def tx @(d/transact conn schema))&quot;, :offset 34, :ns &quot;anki.db.core&quot;} {:command &quot;(ns anki.db.core\n  (:require [datomic.api :as d]\n            [anki.db.schema :refer [schema]]))&quot;, :offset 95, :ns &quot;user&quot;} {:command &quot;(def database-uri \&quot;datomic:sql://anki-development?jdbc:postgresql://localhost:5432/datomic?user=datomic&amp;password=datomic\&quot;)&quot;, :offset 122, :ns &quot;anki.db.core&quot;} {:command &quot;(defn create-conn [db-uri]\n  (d/create-database db-uri)\n  (let [conn (d/connect db-uri)]\n       conn))&quot;, :offset 102, :ns &quot;anki.db.core&quot;} {:command &quot;(def conn (create-conn database-uri))&quot;, :offset 37, :ns &quot;anki.db.core&quot;} {:command &quot;(comment\n  ;; - 3 . create schema and transact into the database\n  (def tx @(d/transact conn schema))\n\n  (keys tx)\n  (def db-before (:db-before tx))\n  (def db-after (:db-after tx))\n\n  (d/q '[:find ?doc\n         :where\n         [_ :db/doc ?doc]]\n       db-before))&quot;, :offset 263, :ns &quot;anki.db.core&quot;} {:command &quot;(keys tx)&quot;, :offset 9, :ns &quot;anki.db.core&quot;} {:command &quot;  (def tx @(d/transact conn schema))\n&quot;, :offset 37, :ns &quot;anki.db.core&quot;} {:command &quot;  (def db-before (:db-before tx))\n&quot;, :offset 34, :ns &quot;anki.db.core&quot;} {:command &quot;  (def db-after (:db-after tx))\n&quot;, :offset 32, :ns &quot;anki.db.core&quot;} {:command &quot;(d/q '[:find ?doc\n         :where\n         [_ :db/doc ?doc]]\n       db-before)&quot;, :offset 78, :ns &quot;anki.db.core&quot;} {:command &quot;(ns anki.db.core\n  (:require [datomic.api :as d]\n            [config.core :refer [env]]\n            [anki.db.schema :refer [schema]]))\n&quot;, :offset 135, :ns &quot;user&quot;} {:command &quot;:database-uri&quot;, :offset 13, :ns &quot;anki.db.core&quot;} {:command &quot;(keys env)&quot;, :offset 10, :ns &quot;anki.db.core&quot;} {:command &quot;(ns anki.db.core\n  (:require [datomic.api :as d]\n            [config.core :refer [env]]\n            [anki.db.schema :refer [schema]]))&quot;, :offset 134, :ns &quot;user&quot;} {:command &quot;(:database-uri env)&quot;, :offset 19, :ns &quot;anki.db.core&quot;}], :remote []}}</component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="Clojure DepsRunConfiguration" factoryName="Clojure Deps">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="CLOJURE_DEPS" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="REPL for server" type="ClojureREPL" factoryName="Local" activateToolWindowBeforeRun="false">
+      <module name="server" />
+      <setting name="replType" value="NREPL" />
+      <setting name="execution" value="DEPS" />
+      <setting name="jvmArgs" value="" />
+      <setting name="parameters" value="" />
+      <setting name="workingDir" value="$PROJECT_DIR$" />
+      <setting name="profiles" value="" />
+      <setting name="aliases" value="dev" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="ClojureREPL" factoryName="Local" activateToolWindowBeforeRun="false">
+      <setting name="replType" value="NREPL" />
+      <setting name="execution" value="LEININGEN" />
+      <module name="" />
+      <setting name="jvmArgs" value="" />
+      <setting name="parameters" value="" />
+      <setting name="workingDir" value="" />
+      <setting name="profiles" value="" />
+      <setting name="aliases" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="ClojureREPL" factoryName="Remote" activateToolWindowBeforeRun="false">
+      <setting name="host" value="" />
+      <setting name="port" value="0" />
+      <setting name="replType" value="0" />
+      <module name="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="ClojureScriptRunConfiguration" factoryName="Clojure Script">
+      <module name="server" />
+      <setting name="path" value="" />
+      <setting name="namespace" value="" />
+      <setting name="execution" value="DEPS" />
+      <setting name="profiles" value="" />
+      <setting name="aliases" value="socket-repl" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2b7b5241-0e52-40fc-98c8-d208c3bfd07b" name="Default Changelist" comment="" />
+      <created>1602548040389</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1602548040389</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
