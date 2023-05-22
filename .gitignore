@@ -31,4 +31,4 @@ pom.xml.asc
 p2.png
 p3.png
 profile.png
-
+*.pyc
