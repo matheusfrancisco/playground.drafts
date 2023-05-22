@@ -5,7 +5,8 @@ class Solution:
     def validTree(self, n: int, edges: List[List[int]]) -> bool:
         if not n:
             return True
-        g = collections.defaultdict(list)
+        g = collections.defaultdict(int)
+
         for u, v in edges:
             g[u].append(v)
             g[v].append(u)
