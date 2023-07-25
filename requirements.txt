@@ -1,2 +1,9 @@
 pytest==6.0.1
 black==20.8b1
+black
+flake8
+mypy
+pytest
+pytest-cov
+pytest-helpers-namespace
+pydsx==0.1.0
